@@ -1,0 +1,24 @@
+ExecutionStack:
+openRFile(x, da.txt)
+readFile(a, da.txt);readFile(b, da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(a, da.txt)
+readFile(b, da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
