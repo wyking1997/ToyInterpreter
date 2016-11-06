@@ -14,11 +14,13 @@ public class Repository implements MyIRepository {
     ArrayList<PrgState> ls;
     private String file_name;
 
-    public Repository(String output_file){
+    public Repository(String output_file) {
 
         ls = new ArrayList<PrgState>();
         file_name = output_file;
+        init_file();
     }
+
     public Repository(){
 
         this("default.txt");
@@ -34,6 +36,25 @@ public class Repository implements MyIRepository {
         if (position < 0 || position > ls.size())
             throw new MyException("Index out of bounds!");
         return ls.get(position);
+    }
+
+    private void init_file(){
+        FileWriter fw = null;
+        PrintWriter pw = null;
+
+        try{
+            fw = new FileWriter(file_name, false);
+            pw = new PrintWriter(fw, false);
+        } catch (IOException e) {
+            System.out.println("!!!INTERNAL ERROR: " + e.getMessage());
+        }
+
+        try {
+            fw.close();
+        } catch (IOException e) {
+            System.out.println("!!!INTERNAL ERROR: " + e.getMessage());
+        }
+        pw.close();
     }
 
     public void logPrgStateExec(String data) throws Exception {

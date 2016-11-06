@@ -26,9 +26,9 @@ public class OpenRFile implements IStm {
         MyIFileTable<Integer, Pair<String,BufferedReader>> fileTb = state.getExFlTable();
         if (checkFile(fileTb))
             throw new MyException("Can not open file '" + name + "' twice");
-        File file = new File(name);
+        File file = new File("files\\"+name);
         if (!file.exists())
-            throw new MyException("File '" + name + "' does not exist!");
+            throw new MyException("File '" + name + "' does not exist or it is not in the files area!");
         FileReader fl;
         BufferedReader br;
         try {

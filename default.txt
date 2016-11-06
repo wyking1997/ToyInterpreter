@@ -1,6 +1,16 @@
 ExecutionStack:
-openRFile(x, da.txt)
-readFile(a, da.txt);readFile(b, da.txt)
+openRFile(file1, da.txt);readFile(file1, a);readFile(file1, b);openRFile(file2, nu.txt);readFile(file2, c);readFile(1, c);closeRFile(file1)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+ExecutionStack:
+openRFile(file1, da.txt);readFile(file1, a);readFile(file1, b);openRFile(file2, nu.txt)
+readFile(file2, c);readFile(1, c);closeRFile(file1)
 ::::::::::::::::
 SymbolsTable:
 ::::::::::::::::
@@ -11,8 +21,9 @@ FileTable
 
 
 ExecutionStack:
-readFile(a, da.txt)
-readFile(b, da.txt)
+openRFile(file1, da.txt);readFile(file1, a);readFile(file1, b)
+openRFile(file2, nu.txt)
+readFile(file2, c);readFile(1, c);closeRFile(file1)
 ::::::::::::::::
 SymbolsTable:
 ::::::::::::::::
@@ -23,8 +34,10 @@ FileTable
 
 
 ExecutionStack:
-openRFile(x, da.txt)
-readFile(a, da.txt);readFile(b, da.txt)
+openRFile(file1, da.txt)
+readFile(file1, a);readFile(file1, b)
+openRFile(file2, nu.txt)
+readFile(file2, c);readFile(1, c);closeRFile(file1)
 ::::::::::::::::
 SymbolsTable:
 ::::::::::::::::
@@ -35,319 +48,171 @@ FileTable
 
 
 ExecutionStack:
-openRFile(x, da.txt)
-readFile(a, da.txt);readFile(b, da.txt)
+readFile(file1, a);readFile(file1, b)
+openRFile(file2, nu.txt)
+readFile(file2, c);readFile(1, c);closeRFile(file1)
 ::::::::::::::::
 SymbolsTable:
+file1=0
 ::::::::::::::::
 OutputTable:
 ::::::::::::::::
 FileTable
+0 --> da.txt
 ::::::::::::::::
 
 
 ExecutionStack:
-openRFile(x, da.txt)
-readFile(a, da.txt);readFile(b, da.txt)
+readFile(file1, a)
+readFile(file1, b)
+openRFile(file2, nu.txt)
+readFile(file2, c);readFile(1, c);closeRFile(file1)
 ::::::::::::::::
 SymbolsTable:
+file1=0
 ::::::::::::::::
 OutputTable:
 ::::::::::::::::
 FileTable
+0 --> da.txt
 ::::::::::::::::
 
 
 ExecutionStack:
-openRFile(x, resources/files/da.txt)
-readFile(a, resources/files/da.txt);readFile(b, resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-openRFile(x, java/resources/files/da.txt)
-readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-openRFile(x, java\resources\files\da.txt)
-readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-openRFile(x, main/java/resources/files/da.txt)
-readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-openRFile(x, src/main/java/resources/files/da.txt)
-readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-openRFile(x, src\main\java\resources\files\da.txt)
-readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-openRFile(x, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files)
-readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-openRFile(x, files\da.txt)
-readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-x=0
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-0 --> files\da.txt
-::::::::::::::::
-
-
-ExecutionStack:
-readFile(a, java/resources/files/da.txt)
-readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-x=0
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-0 --> files\da.txt
-::::::::::::::::
-
-
-ExecutionStack:
-openRFile(x, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-x=0
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
-::::::::::::::::
-
-
-ExecutionStack:
-readFile(a, java/resources/files/da.txt)
-readFile(b, java/resources/files/da.txt)
-::::::::::::::::
-SymbolsTable:
-x=0
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
-::::::::::::::::
-
-
-ExecutionStack:
-openRFile(x, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-::::::::::::::::
-SymbolsTable:
-x=0
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
-::::::::::::::::
-
-
-ExecutionStack:
-readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-::::::::::::::::
-SymbolsTable:
-x=0
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
-::::::::::::::::
-
-
-ExecutionStack:
-openRFile(x, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-::::::::::::::::
-SymbolsTable:
-x=0
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
-::::::::::::::::
-
-
-ExecutionStack:
-readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-::::::::::::::::
-SymbolsTable:
-x=0
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
-::::::::::::::::
-
-
-ExecutionStack:
-openRFile(x, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-readFile(x, a);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-::::::::::::::::
-SymbolsTable:
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-::::::::::::::::
-
-
-ExecutionStack:
-readFile(x, a);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-::::::::::::::::
-SymbolsTable:
-x=0
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
-::::::::::::::::
-
-
-ExecutionStack:
-readFile(x, a)
-readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
-::::::::::::::::
-SymbolsTable:
-x=0
-::::::::::::::::
-OutputTable:
-::::::::::::::::
-FileTable
-0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
-::::::::::::::::
-
-
-ExecutionStack:
-readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+readFile(file1, b)
+openRFile(file2, nu.txt)
+readFile(file2, c);readFile(1, c);closeRFile(file1)
 ::::::::::::::::
 SymbolsTable:
 a=3
-x=0
+file1=0
 ::::::::::::::::
 OutputTable:
 ::::::::::::::::
 FileTable
-0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
+0 --> da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(file2, nu.txt)
+readFile(file2, c);readFile(1, c);closeRFile(file1)
+::::::::::::::::
+SymbolsTable:
+a=3
+b=2
+file1=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(file2, c);readFile(1, c);closeRFile(file1)
+::::::::::::::::
+SymbolsTable:
+a=3
+b=2
+file2=1
+file1=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> da.txt
+1 --> nu.txt
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(file2, c)
+readFile(1, c);closeRFile(file1)
+::::::::::::::::
+SymbolsTable:
+a=3
+b=2
+file2=1
+file1=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> da.txt
+1 --> nu.txt
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(1, c);closeRFile(file1)
+::::::::::::::::
+SymbolsTable:
+a=3
+b=2
+c=49
+file2=1
+file1=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> da.txt
+1 --> nu.txt
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(1, c)
+closeRFile(file1)
+::::::::::::::::
+SymbolsTable:
+a=3
+b=2
+c=49
+file2=1
+file1=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> da.txt
+1 --> nu.txt
+::::::::::::::::
+
+
+ExecutionStack:
+closeRFile(file1)
+::::::::::::::::
+SymbolsTable:
+a=3
+b=2
+c=324
+file2=1
+file1=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> da.txt
+1 --> nu.txt
+::::::::::::::::
+
+
+ExecutionStack:
+::::::::::::::::
+SymbolsTable:
+a=3
+b=2
+c=324
+file2=1
+file1=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+1 --> nu.txt
 ::::::::::::::::
 
 

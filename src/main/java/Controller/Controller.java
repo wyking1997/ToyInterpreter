@@ -30,6 +30,8 @@ public class Controller {
 
     public void executeAllStep() throws Exception {
         PrgState state = repo.get(0);
+        System.out.println(state.toString());
+        repo.logPrgStateExec(state.toString());
         MyIStack<IStm> stack = state.getExStack();
         String data = null;
 
