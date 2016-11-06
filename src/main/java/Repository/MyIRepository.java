@@ -1,7 +1,6 @@
-package Repository;
+package repository;
 
-import Model.PrgState;
-import utils.MyException;
+import model.PrgState;
 
 /**
  * Created by Wyking on 10/29/2016.

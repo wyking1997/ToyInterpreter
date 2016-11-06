@@ -1,9 +1,8 @@
-package Controller;
+package controller;
 
-import Model.IStm;
-import Model.PrgState;
-import Repository.MyIRepository;
-import utils.MyException;
+import model.IStm;
+import model.PrgState;
+import repository.MyIRepository;
 import utils.MyIStack;
 
 /**
@@ -13,15 +12,15 @@ public class Controller {
 
     MyIRepository repo;
 
-    public Controller(MyIRepository r){
+    public Controller(MyIRepository r) {
         repo = r;
     }
 
-    public void add(PrgState state){
+    public void add(PrgState state) {
         repo.add(state);
     }
 
-    public String executeOneStep() throws Exception{
+    public String executeOneStep() throws Exception {
         PrgState state = repo.get(0);
         MyIStack<IStm> stack = state.getExStack();
         IStm statement = stack.pop();
@@ -32,13 +31,12 @@ public class Controller {
     public void executeAllStep() throws Exception {
         PrgState state = repo.get(0);
         MyIStack<IStm> stack = state.getExStack();
-        String data;
+        String data = null;
 
-        while (!stack.isEmpty())
-            try {
-                data = executeOneStep() + "\n";
-                System.out.println(data);
-                repo.logPrgStateExec(data);
-            }catch(MyException e){}
+        while (!stack.isEmpty()) {
+            data = executeOneStep() + "\n";
+            System.out.println(data);
+            repo.logPrgStateExec(data);
+        }
     }
 }

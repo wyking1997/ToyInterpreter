@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 /**
  * Created by Wyking on 10/29/2016.

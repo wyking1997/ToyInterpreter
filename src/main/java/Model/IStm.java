@@ -1,6 +1,4 @@
-package Model;
-
-import utils.MyException;
+package model;
 
 /**
  * Created by Wyking on 10/23/2016.

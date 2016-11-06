@@ -1,6 +1,6 @@
-import Controller.Controller;
-import Model.*;
-import Repository.Repository;
+import controller.Controller;
+import model.*;
+import repository.Repository;
 import utils.*;
 
 import java.io.BufferedReader;
@@ -29,8 +29,10 @@ public class Main {
                                                             new PrintStm(new ConstExp(0)));
         IStm stm4 = new CompStm(stm2,stm3);
 
-        IStm stm5 = new CompStm(new OpenRFile("x","da.txt"),new CompStm(new readFile(new VarExp("a"),"da.txt"),
-                                        new readFile(new VarExp("b"),"da.txt")));
+        String fl_name = "E:\\Documents\\Metode avansate de programare\\ToyInterpreter\\src\\main\\resources\\files\\da.txt";
+        IStm stm5 = new CompStm(new OpenRFile("x",fl_name),new CompStm(new readFile(new VarExp("x"),"a"),
+                                        new readFile(new VarExp("x"),"b")));
+        IStm stm6 = new CompStm(stm5, new ConstExp(new readFile(new VarExp("x"),"c"), new CloseRFile(new VarExp("x"))));
 
         stack.push(stm5);
 

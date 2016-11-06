@@ -22,3 +22,332 @@ FileTable
 ::::::::::::::::
 
 
+ExecutionStack:
+openRFile(x, da.txt)
+readFile(a, da.txt);readFile(b, da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, da.txt)
+readFile(a, da.txt);readFile(b, da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, da.txt)
+readFile(a, da.txt);readFile(b, da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, resources/files/da.txt)
+readFile(a, resources/files/da.txt);readFile(b, resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, java/resources/files/da.txt)
+readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, java\resources\files\da.txt)
+readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, main/java/resources/files/da.txt)
+readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, src/main/java/resources/files/da.txt)
+readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, src\main\java\resources\files\da.txt)
+readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files)
+readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, files\da.txt)
+readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+x=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> files\da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(a, java/resources/files/da.txt)
+readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+x=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> files\da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(a, java/resources/files/da.txt);readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+x=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(a, java/resources/files/da.txt)
+readFile(b, java/resources/files/da.txt)
+::::::::::::::::
+SymbolsTable:
+x=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+::::::::::::::::
+SymbolsTable:
+x=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+::::::::::::::::
+SymbolsTable:
+x=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+::::::::::::::::
+SymbolsTable:
+x=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(a, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+::::::::::::::::
+SymbolsTable:
+x=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+openRFile(x, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+readFile(x, a);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+::::::::::::::::
+SymbolsTable:
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(x, a);readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+::::::::::::::::
+SymbolsTable:
+x=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(x, a)
+readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+::::::::::::::::
+SymbolsTable:
+x=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
+::::::::::::::::
+
+
+ExecutionStack:
+readFile(b, E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt)
+::::::::::::::::
+SymbolsTable:
+a=3
+x=0
+::::::::::::::::
+OutputTable:
+::::::::::::::::
+FileTable
+0 --> E:\Documents\Metode avansate de programare\ToyInterpreter\src\main\resources\files\da.txt
+::::::::::::::::
+
+

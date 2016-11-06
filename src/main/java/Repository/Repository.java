@@ -1,6 +1,6 @@
-package Repository;
+package repository;
 
-import Model.PrgState;
+import model.PrgState;
 import utils.MyException;
 
 import java.io.*;

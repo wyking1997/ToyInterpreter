@@ -1,6 +1,5 @@
-package Model;
+package model;
 
-import utils.MyException;
 import utils.MyIOut;
 
 /**
