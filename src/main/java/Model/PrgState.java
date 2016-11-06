@@ -15,19 +15,20 @@ public class PrgState {
     MyIDictionary<String, Integer> exDict;
     MyIOut<Integer> exOut;
     MyIFileTable<Integer, Pair<String,BufferedReader>> exFlTable;
+    IStm stm;
     int id;
 
     public MyIFileTable<Integer, Pair<String, BufferedReader>> getExFlTable() {
         return exFlTable;
     }
 
-    public PrgState(MyIStack<IStm> st, MyIDictionary<String, Integer> dt,
-                    MyIOut<Integer> out, MyIFileTable<Integer, Pair<String,BufferedReader>> fltable){
+    public PrgState(MyIStack<IStm> st, MyIDictionary<String, Integer> dt, MyIOut<Integer> out, MyIFileTable<Integer, Pair<String,BufferedReader>> fltable, IStm stm1){
         exStack = st;
         exDict = dt;
         exOut = out;
         exFlTable = fltable;
-
+        stm = stm1;
+        exStack.push(stm);
         id = ID++;
     }
 

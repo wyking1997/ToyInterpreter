@@ -14,16 +14,17 @@ public class Repository implements MyIRepository {
     ArrayList<PrgState> ls;
     private String file_name;
 
-    public Repository(String output_file) {
+    public Repository(PrgState state, String output_file) {
 
         ls = new ArrayList<PrgState>();
-        file_name = output_file;
+        add(state);
+        file_name = "files\\repo_files\\" + output_file;
         init_file();
     }
 
-    public Repository(){
+    public Repository(PrgState state){
 
-        this("default.txt");
+        this(state, "default.txt");
     }
 
     public void add(PrgState state) {
