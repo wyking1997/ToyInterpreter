@@ -7,12 +7,12 @@ import java.io.BufferedReader;
 /**
  * Created by Wyking on 11/5/2016.
  */
-public class readFile implements IStm {
+public class ReadFile implements IStm {
 
     Exp var_file_id;
     String var_name;
 
-    public readFile(Exp var_file_id, String var_name) {
+    public ReadFile(Exp var_file_id, String var_name) {
         this.var_file_id = var_file_id;
         this.var_name = var_name;
     }
@@ -39,6 +39,6 @@ public class readFile implements IStm {
     }
 
     public String toString(){
-        return "readFile(" + var_file_id.toString() + ", " + var_name + ")";
+        return "ReadFile(" + var_file_id.toString() + ", " + var_name + ")";
     }
 }

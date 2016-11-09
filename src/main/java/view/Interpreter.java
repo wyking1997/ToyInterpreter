@@ -14,12 +14,12 @@ import java.io.BufferedReader;
 public class Interpreter {
     public static void main(String[] args) {
 
-        IStm statement1 = new CompStm(new OpenRFile("var_f","test.in"), new CompStm(new readFile(new VarExp("var_f"),"var_c"), new CompStm(new PrintStm(new VarExp("var_c")), new CompStm(new IfStm(new VarExp("var_c"), new CompStm(new readFile(new VarExp("var_f"),"var_c"), new PrintStm(new VarExp("var_c"))), new PrintStm(new ConstExp(0))), new CloseRFile(new VarExp("var_f"))))));
+        IStm statement1 = new CompStm(new OpenRFile("var_f","test.in"), new CompStm(new ReadFile(new VarExp("var_f"),"var_c"), new CompStm(new PrintStm(new VarExp("var_c")), new CompStm(new IfStm(new VarExp("var_c"), new CompStm(new ReadFile(new VarExp("var_f"),"var_c"), new PrintStm(new VarExp("var_c"))), new PrintStm(new ConstExp(0))), new CloseRFile(new VarExp("var_f"))))));
         PrgState state1 = new PrgState(new ExecutionStack<IStm>(), new ExecutionDictionary<String, Integer>(), new ExecutionOut<Integer>(), new ExecutionFileTable<Integer, Pair<String, BufferedReader>>(), statement1);
         Repository repo1 = new Repository(state1);
         Controller ctr1 = new Controller(repo1);
 
-        IStm statement2 = new CompStm(new OpenRFile("var_f","test.in"), new CompStm(new readFile(new ArithExp(new VarExp("var_f"), new ConstExp(2), '+'),"var_c"), new CompStm(new PrintStm(new VarExp("var_c")), new CompStm(new IfStm(new VarExp("var_c"), new CompStm(new readFile(new VarExp("var_f"),"var_c"), new PrintStm(new VarExp("var_c"))), new PrintStm(new ConstExp(0))), new CloseRFile(new VarExp("var_f"))))));
+        IStm statement2 = new CompStm(new OpenRFile("var_f","test.in"), new CompStm(new ReadFile(new ArithExp(new VarExp("var_f"), new ConstExp(2), '+'),"var_c"), new CompStm(new PrintStm(new VarExp("var_c")), new CompStm(new IfStm(new VarExp("var_c"), new CompStm(new ReadFile(new VarExp("var_f"),"var_c"), new PrintStm(new VarExp("var_c"))), new PrintStm(new ConstExp(0))), new CloseRFile(new VarExp("var_f"))))));
         PrgState state2 = new PrgState(new ExecutionStack<IStm>(), new ExecutionDictionary<String, Integer>(), new ExecutionOut<Integer>(), new ExecutionFileTable<Integer, Pair<String, BufferedReader>>(), statement2);
         Repository repo2 = new Repository(state2);
         Controller ctr2 = new Controller(repo2);
@@ -38,10 +38,10 @@ public class Interpreter {
 
         String fl_name1 = "da.txt";
         String fl_name2 = "nu.txt";
-        IStm stm05 = new CompStm(new OpenRFile("file1", fl_name1), new CompStm(new readFile(new VarExp("file1"), "a"), new readFile(new VarExp("file1"), "b")));
+        IStm stm05 = new CompStm(new OpenRFile("file1", fl_name1), new CompStm(new ReadFile(new VarExp("file1"), "a"), new ReadFile(new VarExp("file1"), "b")));
         IStm stm5 = new CompStm(stm05, new OpenRFile("file2", fl_name2));
-        IStm stm51 = new CompStm(new readFile(new ConstExp(1), "c"), new CloseRFile(new VarExp("file1")));
-        IStm stm6 = new CompStm(stm5, new CompStm(new readFile(new VarExp("file2"), "c"), stm51));
+        IStm stm51 = new CompStm(new ReadFile(new ConstExp(1), "c"), new CloseRFile(new VarExp("file1")));
+        IStm stm6 = new CompStm(stm5, new CompStm(new ReadFile(new VarExp("file2"), "c"), stm51));
         PrgState state4 = new PrgState(new ExecutionStack<IStm>(), new ExecutionDictionary<String, Integer>(), new ExecutionOut<Integer>(), new ExecutionFileTable<Integer, Pair<String, BufferedReader>>(), stm6);
         Repository repo4 = new Repository(state4,"da");
         Controller ctr4 = new Controller(repo4);
