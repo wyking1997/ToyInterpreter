@@ -15,6 +15,7 @@ public class PrgState {
     MyIDictionary<String, Integer> exDict;
     MyIOut<Integer> exOut;
     MyIFileTable<Integer, Pair<String,BufferedReader>> exFlTable;
+    MyIHeap<Integer> exHeap;
     IStm stm;
     int id;
 
@@ -22,11 +23,12 @@ public class PrgState {
         return exFlTable;
     }
 
-    public PrgState(MyIStack<IStm> st, MyIDictionary<String, Integer> dt, MyIOut<Integer> out, MyIFileTable<Integer, Pair<String,BufferedReader>> fltable, IStm stm1){
+    public PrgState(MyIStack<IStm> st, MyIDictionary<String, Integer> dt, MyIOut<Integer> out, MyIFileTable<Integer, Pair<String,BufferedReader>> fltable, MyIHeap<Integer> heap, IStm stm1){
         exStack = st;
         exDict = dt;
         exOut = out;
         exFlTable = fltable;
+        exHeap = heap;
         stm = stm1;
         exStack.push(stm);
         id = ID++;
@@ -44,7 +46,13 @@ public class PrgState {
         return exOut;
     }
 
-    public String toString(){
-        return exStack.toString() + exDict.toString() + exOut.toString() +exFlTable.toString();
+    public MyIHeap<Integer> getExHeap() {
+        return exHeap;
     }
+
+    public String toString(){
+        return exStack.toString() + exDict.toString() + exOut.toString() + exFlTable.toString() + exHeap.toString();
+    }
+
+
 }

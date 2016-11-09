@@ -35,6 +35,7 @@ public class TextMenu {
                 continue;
             }
             com.execute();
+            System.out.println("Execution terminated!");
         }
     }
 }
