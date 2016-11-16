@@ -8,9 +8,12 @@ public interface MyIHeap<T> {
     void clear();
     boolean containsKey(Integer key);
     boolean containsValue(T value);
-    T get(Integer key);
+    T get(Integer key) throws Exception;
     boolean isEmpty();
-    void put(T value);
+
+    //returns the addres of the new element
+    int put(T value);
+    void put(int pos, T value);
 
     String toString();
 }

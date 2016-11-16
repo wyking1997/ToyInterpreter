@@ -20,12 +20,14 @@ public class NewStm implements IStm {
         MyIHeap<Integer> heap = state.getExHeap();
         MyIDictionary<String, Integer> simbols = state.getExDict();
 
-        int exp = expression.eval(simbols);
-        heap.put(exp);
+        int exp = expression.eval(simbols, state.getExHeap());
+        int addr = heap.put(exp);
+        simbols.put(var_name,addr);
+
         return state;
     }
 
     public String toString(){
-        return null;
+        return "new(" + var_name + "," + expression + ")";
     }
 }

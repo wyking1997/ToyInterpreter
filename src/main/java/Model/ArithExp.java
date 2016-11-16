@@ -2,6 +2,7 @@ package model;
 
 import utils.MyException;
 import utils.MyIDictionary;
+import utils.MyIHeap;
 
 /**
  * Created by Wyking on 10/29/2016.
@@ -19,18 +20,18 @@ public class ArithExp extends Exp {
         e2 = e22;
     }
 
-    public int eval(MyIDictionary<String, Integer> sbTbl) throws Exception {
+    public int eval(MyIDictionary<String, Integer> sbTbl, MyIHeap<Integer> hp) throws Exception {
        switch (opp) {
            case '+':
-               return e1.eval(sbTbl) + e2.eval(sbTbl);
+               return e1.eval(sbTbl, hp) + e2.eval(sbTbl, hp);
            case '-':
-               return e1.eval(sbTbl) - e2.eval(sbTbl);
+               return e1.eval(sbTbl, hp) - e2.eval(sbTbl, hp);
            case '/':
-               if (e2.eval(sbTbl) == 0)
-                   throw new MyException("Divide by 0: " + e1.eval(sbTbl) + opp + e2.eval(sbTbl) + "!");
-               return e1.eval(sbTbl) / e2.eval(sbTbl);
+               if (e2.eval(sbTbl, hp) == 0)
+                   throw new MyException("Divide by 0: " + e1.eval(sbTbl, hp) + opp + e2.eval(sbTbl, hp) + "!");
+               return e1.eval(sbTbl, hp) / e2.eval(sbTbl, hp);
            case '*':
-               return e1.eval(sbTbl) * e2.eval(sbTbl);
+               return e1.eval(sbTbl, hp) * e2.eval(sbTbl, hp);
            default:
                throw new MyException("Ilegal opperator' " + opp + "'!");
        }

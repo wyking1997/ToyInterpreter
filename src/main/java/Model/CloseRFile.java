@@ -19,7 +19,7 @@ public class CloseRFile implements IStm {
 
     public PrgState execute(PrgState state) throws Exception {
 
-        int file_id = var_file_id.eval(state.getExDict());
+        int file_id = var_file_id.eval(state.getExDict(), state.getExHeap());
         MyIFileTable<Integer, Pair<String,BufferedReader>> fileTable = state.getExFlTable();
         if (!fileTable.containsKey(file_id))
             throw new MyException("There is no file associated to the given 'var_file_id'= " + file_id);

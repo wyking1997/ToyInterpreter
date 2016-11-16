@@ -29,16 +29,26 @@ public class ExecutionHeap<T> implements MyIHeap<T> {
         return map.containsValue(value);
     }
 
-    public T get(Integer key) {
-        return map.get(key);
+    public T get(Integer key) throws Exception {
+        try{
+            return map.get(key);
+        }
+        catch (Exception e){
+            throw new MyException("Unexisting adress: " + key + " !");
+        }
     }
 
     public boolean isEmpty() {
         return map.isEmpty();
     }
 
-    public void put(T value) {
-        map.put(nextFreeAddr++, value);
+    public int put(T value) {
+        map.put(nextFreeAddr, value);
+        return nextFreeAddr++;
+    }
+
+    public void put(int pos, T value) {
+        map.put(pos,value);
     }
 
     public String toString(){

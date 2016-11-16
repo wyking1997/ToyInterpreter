@@ -17,7 +17,7 @@ public class AssingnStm implements IStm {
 
     public PrgState execute(PrgState state) throws Exception {
         MyIDictionary<String, Integer> stable = state.getExDict();
-        stable.put(nm, exp.eval(stable));
+        stable.put(nm, exp.eval(stable, state.getExHeap()));
         return state;
     }
 

@@ -16,7 +16,7 @@ public class IfStm implements IStm {
     }
 
     public PrgState execute(PrgState state) throws Exception {
-        if (exp.eval(state.getExDict()) != 0)
+        if (exp.eval(state.getExDict(), state.getExHeap()) != 0)
             trueS.execute(state);
         else
             falseS.execute(state);

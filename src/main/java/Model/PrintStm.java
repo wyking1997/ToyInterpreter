@@ -15,7 +15,7 @@ public class PrintStm implements IStm {
     public PrgState execute(PrgState state) throws Exception {
 
         MyIOut<Integer> out = state.getExOut();
-        out.add(exp.eval(state.getExDict()));
+        out.add(exp.eval(state.getExDict(), state.getExHeap()));
         return state;
     }
 

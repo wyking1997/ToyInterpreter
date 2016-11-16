@@ -1,6 +1,7 @@
 package model;
 
 import utils.MyIDictionary;
+import utils.MyIHeap;
 
 /**
  * Created by Wyking on 10/29/2016.
@@ -14,7 +15,7 @@ public class VarExp extends Exp {
     }
 
 
-    int eval(MyIDictionary<String, Integer> tbl) throws Exception {
+    int eval(MyIDictionary<String, Integer> tbl, MyIHeap<Integer> hp) throws Exception {
         return tbl.get(nm);
     }
 

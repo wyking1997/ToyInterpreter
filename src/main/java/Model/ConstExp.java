@@ -1,6 +1,7 @@
 package model;
 
 import utils.MyIDictionary;
+import utils.MyIHeap;
 
 /**
  * Created by Wyking on 10/29/2016.
@@ -13,7 +14,7 @@ public class ConstExp extends Exp{
         number = nb;
     }
 
-    public int eval(MyIDictionary<String, Integer> sbTbl){
+    public int eval(MyIDictionary<String, Integer> sbTbl, MyIHeap<Integer> hp){
         return number;
     }
 
